@@ -14,6 +14,7 @@ neo = NeoPixel(Pin(38, Pin.OUT), 1)
 neo.ORDER = (0, 1, 2, 3)
 RGB = [100, 0, 0]
 # pinLED = Pin(38, Pin.OUT)  # create output pin on GPIO0
+<<<<<<< Updated upstream
 type_pin = Pin(5, Pin.IN)
 
 def start_led():
@@ -29,12 +30,16 @@ def change_led():
             gradation()
 
 def basic_led():
+=======
+def basic():
+>>>>>>> Stashed changes
     while True:
         RGB = [100, 0, 0]
         neo[0] = tuple(RGB)
         neo.write()
         print(RGB)
         time.sleep(1)
+<<<<<<< Updated upstream
 
         RGB = [0, 100, 0]
         neo[0] = tuple(RGB)
@@ -48,6 +53,21 @@ def basic_led():
         print(RGB)
         time.sleep(1)
 
+=======
+    
+        RGB = [0, 100, 0]
+        neo[0] = tuple(RGB)
+        neo.write()
+        print(RGB)
+        time.sleep(1)
+    
+        RGB = [0, 0, 100]
+        neo[0] = tuple(RGB)
+        neo.write()
+        print(RGB)
+        time.sleep(1)
+
+>>>>>>> Stashed changes
 def gradation():
     while True:
         for r in (0,257):
@@ -55,37 +75,61 @@ def gradation():
             neo[0] = tuple(RGB)
             neo.write()
             print(RGB)
+<<<<<<< Updated upstream
             time.sleep(0.1)
+=======
+            time.sleep(0.2)
+>>>>>>> Stashed changes
             for g in (0,257):
                 RGB = [r, g, 0]
                 neo[0] = tuple(RGB)
                 neo.write()
                 print(RGB)
+<<<<<<< Updated upstream
                 time.sleep(0.1)
+=======
+                time.sleep(0.2)
+>>>>>>> Stashed changes
                 for b in (0,257):
                     RGB = [r, g, b]
                     neo[0] = tuple(RGB)
                     neo.write()
                     print(RGB)
+<<<<<<< Updated upstream
                     time.sleep(0.1)
+=======
+                    time.sleep(0.2)
+>>>>>>> Stashed changes
                     for b in (257, 0, -1):
                         RGB = [r, g, b]
                         neo[0] = tuple(RGB)
                         neo.write()
                         print(RGB)
+<<<<<<< Updated upstream
                         time.sleep(0.1)
+=======
+                        time.sleep(0.2)
+>>>>>>> Stashed changes
                         for g in (257, 0, -1):
                             RGB = [r, g, b]
                             neo[0] = tuple(RGB)
                             neo.write()
                             print(RGB)
+<<<<<<< Updated upstream
                             time.sleep(0.1)
+=======
+                            time.sleep(0.2)
+>>>>>>> Stashed changes
                             for r in (257, 0, -1):
                                 RGB = [r, g, b]
                                 neo[0] = tuple(RGB)
                                 neo.write()
                                 print(RGB)
+<<<<<<< Updated upstream
                                 time.sleep(0.1)
+=======
+                                time.sleep(0.2)
+>>>>>>> Stashed changes
 
 import network
 
@@ -103,6 +147,10 @@ import network
 # ap.active(True)         # activate the interface
 
 if __name__ == '__main__':
+<<<<<<< Updated upstream
     # change_led()
     # start_led()
     gradation()
+=======
+    gradation()
+>>>>>>> Stashed changes
